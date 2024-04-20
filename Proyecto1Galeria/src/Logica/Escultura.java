@@ -4,8 +4,8 @@ public class Escultura extends Pieza {
 	private double largo;
 	private double ancho;
 	private double alto;
-	private boolean electricidad;
-	private String material
+	private bool electricidad;
+	private String material;
 
 	//Getters
 	public double getLargo() {
