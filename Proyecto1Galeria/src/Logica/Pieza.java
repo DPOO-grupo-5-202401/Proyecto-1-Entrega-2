@@ -1,6 +1,8 @@
 package Logica;
 
 import java.util.HashMap;
+import java.util.ArrayList;
+
 
 public abstract class Pieza {
 	protected String id;
@@ -16,33 +18,9 @@ public abstract class Pieza {
     protected int valorMinimo;
     protected int valor;
     protected Comprador DueñoActual;
-    protected HashMap<String, Autor> autor;
+    protected Autor autor;
     private double peso;
     private String observacion;
-    
-    
-    public Pieza(String id, String titulo,int año,String lugarDeCreacion,boolean enExhibicion, 
-    		String FechaEntradaGaleria,String FechaSalidaGaleria,String EstadoActual,
-    		boolean ValorFijo,int ValorInicial,int ValorMinimo,int Valor,
-    		Comprador DueñoActual, int peso,String observacion) {
-    	
-    	this.id= id;
-    	this.titulo= titulo;
-    	this.año= año;
-    	this.lugarDeCreacion= lugarDeCreacion;
-    	this.enExhibicion= enExhibicion;
-    	this.fechaEntradaGaleria= fechaEntradaGaleria;
-    	this.fechaSalidaGaleria= fechaSalidaGaleria;
-    	this.estadoActual= estadoActual;
-    	this.valorFijo= valorFijo;
-    	this.valorInicial= valorInicial;
-    	this.valorMinimo= valorMinimo;
-    	this.valor= valor;
-    	this.DueñoActual= DueñoActual;
-    	this.peso=peso;
-    	this.observacion=observacion;
-
-    }
     
     
 //Getters
@@ -105,6 +83,9 @@ public abstract class Pieza {
     public String getObservacion() {
 		return observacion;
 	}
+    public Autor getAutor() {
+    	return autor;
+    }
     
     
     //Setters    
@@ -168,8 +149,33 @@ public abstract class Pieza {
 		this.observacion=observacion;
 	}
     
+    public void Autor(Autor autor) {
+    	this.autor=autor
+    }
     
+    
+    public Pieza(String id, String titulo,int año,String lugarDeCreacion,boolean enExhibicion, 
+    		String FechaEntradaGaleria,String FechaSalidaGaleria,String EstadoActual,
+    		boolean ValorFijo,int ValorInicial,int ValorMinimo,int Valor,
+    		Comprador DueñoActual, int peso,String observacion,Autor autor) {
+    	
+    	this.id= id;
+    	this.titulo= titulo;
+    	this.año= año;
+    	this.lugarDeCreacion= lugarDeCreacion;
+    	this.enExhibicion= enExhibicion;
+    	this.fechaEntradaGaleria= fechaEntradaGaleria;
+    	this.fechaSalidaGaleria= fechaSalidaGaleria;
+    	this.estadoActual= estadoActual;
+    	this.valorFijo= valorFijo;
+    	this.valorInicial= valorInicial;
+    	this.valorMinimo= valorMinimo;
+    	this.valor= valor;
+    	this.DueñoActual= DueñoActual;
+    	this.peso=peso;
+    	this.observacion=observacion;
+    	this.autor=autor;
 
-
+    }
     
 }

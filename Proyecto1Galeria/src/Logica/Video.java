@@ -23,8 +23,10 @@ public class Video extends Pieza {
 	public Video(String id, String titulo,int año,String lugarDeCreacion,boolean enExhibicion, 
     		String FechaEntradaGaleria,String FechaSalidaGaleria,String EstadoActual,
     		boolean ValorFijo,int ValorInicial,int ValorMinimo,int Valor,Comprador DueñoActual,
-    		double peso, String observacion, int resolucion, int duracion) {
+    		double peso, String observacion, int resolucion, int duracion,Autor autor) {
 		
+		this.resolucion= resolucion;
+		this.duracion= duracion;
 		super(id);
 		super(titulo);
 		super(lugarDeCreacion);
@@ -39,9 +41,8 @@ public class Video extends Pieza {
 		super(DueñoActual);
 		super(peso);
 		super(observacion);
+		super(autor);
 		
-		this.resolucion= resolucion;
-		this.duracion= duracion;
 	}
 	
 

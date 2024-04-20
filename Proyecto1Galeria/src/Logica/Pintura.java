@@ -38,8 +38,11 @@ public class Pintura extends Pieza{
 	public Pintura(String id, String titulo,int año,String lugarDeCreacion,boolean enExhibicion, 
     		String FechaEntradaGaleria,String FechaSalidaGaleria,String EstadoActual,
     		boolean ValorFijo,int ValorInicial,int ValorMinimo,int Valor,Comprador DueñoActual,
-    		double peso, String observacion, int altura, String tecnica, int ancho, String estilo) {
-		
+    		double peso, String observacion, int altura, String tecnica, int ancho, String estilo,Autor autor) {
+		this.tecnica= tecnica;
+		this.estilo= estilo;
+		this.ancho= ancho;
+		this.altura= altura;
 		super(id);
 		super(titulo);
 		super(lugarDeCreacion);
@@ -54,11 +57,8 @@ public class Pintura extends Pieza{
 		super(DueñoActual);
 		super(peso);
 		super(observacion);
+		super(autor);
 		
-		this.tecnica= tecnica;
-		this.estilo= estilo;
-		this.ancho= ancho;
-		this.altura= altura;
 	}
 	
 

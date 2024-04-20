@@ -4,8 +4,7 @@ public class Escultura extends Pieza {
 	private double largo;
 	private double ancho;
 	private double alto;
-	private bool electricidad;
-	private String material;
+	private boolean electricidad;
 
 	//Getters
 	public double getLargo() {
@@ -56,8 +55,11 @@ public class Escultura extends Pieza {
 	public Escultura(String id, String titulo,int año,String lugarDeCreacion,boolean enExhibicion, 
     		String FechaEntradaGaleria,String FechaSalidaGaleria,String EstadoActual,
     		boolean ValorFijo,int ValorInicial,int ValorMinimo,int Valor,Comprador DueñoActual,
-    		double largo,double ancho,double alto,double peso,boolean electricidad,String observacion) {
-		
+    		double largo,double ancho,double alto,double peso,boolean electricidad,String observacion,Autor autor) {
+		this.largo=largo;
+		this.alto=alto;
+		this.electricidad=electricidad;
+		this.material=material;
 		super(id);
 		super(titulo);
 		super(lugarDeCreacion);
@@ -71,11 +73,9 @@ public class Escultura extends Pieza {
 		super(Valor);
 		super(DueñoActual);
 		super(peso);
-		super(observacion)
-		this.largo=largo;
-		this.alto=alto;
-		this.electricidad=electricidad;
-		this.material=material;
+		super(observacion);
+		super(autor);
+		
 	}
 	
 	
