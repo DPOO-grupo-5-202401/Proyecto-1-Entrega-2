@@ -34,32 +34,19 @@ public class Pintura extends Pieza{
 	public void setAltura(int altura) {
     	this.altura= altura;
     }
+	public Pintura(String id, String titulo, int año, String lugarDeCreacion, boolean enExhibicion,
+			String FechaEntradaGaleria, String FechaSalidaGaleria, String EstadoActual, boolean ValorFijo,
+			int ValorInicial, int ValorMinimo, int Valor, Comprador DueñoActual, int peso, String observacion,
+			Logica.Autor autor, String tecnica, String estilo, int altura, int ancho) {
+		super(id, titulo, año, lugarDeCreacion, enExhibicion, FechaEntradaGaleria, FechaSalidaGaleria, EstadoActual,
+				ValorFijo, ValorInicial, ValorMinimo, Valor, DueñoActual, peso, observacion, autor);
+		this.tecnica = tecnica;
+		this.estilo = estilo;
+		this.altura = altura;
+		this.ancho = ancho;
+	}
 	
-	public Pintura(String id, String titulo,int año,String lugarDeCreacion,boolean enExhibicion, 
-    		String FechaEntradaGaleria,String FechaSalidaGaleria,String EstadoActual,
-    		boolean ValorFijo,int ValorInicial,int ValorMinimo,int Valor,Comprador DueñoActual,
-    		double peso, String observacion, int altura, String tecnica, int ancho, String estilo,Autor autor) {
-		this.tecnica= tecnica;
-		this.estilo= estilo;
-		this.ancho= ancho;
-		this.altura= altura;
-		super(id);
-		super(titulo);
-		super(lugarDeCreacion);
-		super(enExhibicion);
-		super(FechaEntradaGaleria);
-		super(FechaSalidaGaleria);
-		super(EstadoActual);
-		super(ValorFijo);
-		super(ValorInicial);
-		super(ValorMinimo);
-		super(Valor);
-		super(DueñoActual);
-		super(peso);
-		super(observacion);
-		super(autor);
+	
 		
 	}
 	
-
-}

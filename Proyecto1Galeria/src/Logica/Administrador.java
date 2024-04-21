@@ -12,6 +12,7 @@ public class Administrador extends Usuario {
 	private String contrasena;
 	private String login;
     private HashMap<String, Comprador> compradoresVerificados;
+    
 	
 	
 	

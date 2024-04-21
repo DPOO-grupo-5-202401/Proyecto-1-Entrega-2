@@ -5,6 +5,17 @@ public class Video extends Pieza {
 	private int duracion;
 	
 	
+	public Video(String id, String titulo, int año, String lugarDeCreacion, boolean enExhibicion,
+			String FechaEntradaGaleria, String FechaSalidaGaleria, String EstadoActual, boolean ValorFijo,
+			int ValorInicial, int ValorMinimo, int Valor, Comprador DueñoActual, int peso, String observacion,
+			Logica.Autor autor, int resolucion, int duracion) {
+		super(id, titulo, año, lugarDeCreacion, enExhibicion, FechaEntradaGaleria, FechaSalidaGaleria, EstadoActual,
+				ValorFijo, ValorInicial, ValorMinimo, Valor, DueñoActual, peso, observacion, autor);
+		this.resolucion = resolucion;
+		this.duracion = duracion;
+	}
+	
+	
 	public int getResolucion() {
     	return resolucion;
     }
@@ -20,30 +31,10 @@ public class Video extends Pieza {
 	public void setDuracion(int duracion) {
     	this.duracion= duracion;
     }
-	public Video(String id, String titulo,int año,String lugarDeCreacion,boolean enExhibicion, 
-    		String FechaEntradaGaleria,String FechaSalidaGaleria,String EstadoActual,
-    		boolean ValorFijo,int ValorInicial,int ValorMinimo,int Valor,Comprador DueñoActual,
-    		double peso, String observacion, int resolucion, int duracion,Autor autor) {
-		
-		this.resolucion= resolucion;
-		this.duracion= duracion;
-		super(id);
-		super(titulo);
-		super(lugarDeCreacion);
-		super(enExhibicion);
-		super(FechaEntradaGaleria);
-		super(FechaSalidaGaleria);
-		super(EstadoActual);
-		super(getValorFijo);
-		super(ValorInicial);
-		super(ValorMinimo);
-		super(Valor);
-		super(DueñoActual);
-		super(peso);
-		super(observacion);
-		super(autor);
-		
-	}
+
+
+
+	
 	
 
 }

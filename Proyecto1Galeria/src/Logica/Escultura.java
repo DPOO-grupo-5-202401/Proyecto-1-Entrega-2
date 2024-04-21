@@ -1,10 +1,21 @@
 package Logica;
 
 public class Escultura extends Pieza {
+	
+	public Escultura(String id, String titulo, int año, String lugarDeCreacion, boolean enExhibicion,
+			String FechaEntradaGaleria, String FechaSalidaGaleria, String EstadoActual, boolean ValorFijo,
+			int ValorInicial, int ValorMinimo, int Valor, Comprador DueñoActual, int peso, String observacion,
+			Autor autor) {
+		super(id, titulo, año, lugarDeCreacion, enExhibicion, FechaEntradaGaleria, FechaSalidaGaleria, EstadoActual, ValorFijo,
+				ValorInicial, ValorMinimo, Valor, DueñoActual, peso, observacion, autor);
+	}
+
+
 	private double largo;
 	private double ancho;
 	private double alto;
 	private Boolean electricidad;
+	private String material;
 
 	//Getters
 	public double getLargo() {
@@ -19,10 +30,9 @@ public class Escultura extends Pieza {
 		return alto;
 	}
 	
-	public boolean getElectricidad() {
-		return eletricidad;
+	public Boolean getElectricidad() {
+		return electricidad;
 	}
-	
 	
 	
 	public String getMaterial() {
@@ -51,32 +61,13 @@ public class Escultura extends Pieza {
 	public void setMaterial(String material) {
 		this.material=material;
 	}
+
+	public void setElectricidad(Boolean electricidad) {
+		this.electricidad = electricidad;
+	}
 	
-	public Escultura(String id, String titulo,int año,String lugarDeCreacion,boolean enExhibicion, 
-    		String FechaEntradaGaleria,String FechaSalidaGaleria,String EstadoActual,
-    		boolean ValorFijo,int ValorInicial,int ValorMinimo,int Valor,Comprador DueñoActual,
-    		double largo,double ancho,double alto,double peso,boolean electricidad,String observacion,Autor autor) {
-		this.largo=largo;
-		this.alto=alto;
-		this.electricidad=electricidad;
-		this.material=material;
-		super(id);
-		super(titulo);
-		super(lugarDeCreacion);
-		super(enExhibicion);
-		super(FechaEntradaGaleria);
-		super(FechaSalidaGaleria);
-		super(EstadoActual);
-		super(getValorFijo);
-		super(ValorInicial);
-		super(ValorMinimo);
-		super(Valor);
-		super(DueñoActual);
-		super(peso);
-		super(observacion);
-		super(autor);
+
 		
 	}
 	
-	
-}
+

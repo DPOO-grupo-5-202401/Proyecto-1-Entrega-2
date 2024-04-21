@@ -18,35 +18,21 @@ public class Fotografia extends Pieza{
 	public void setTipo(String tipo) {
     	this.tipo= tipo;
     }
-	
-	
-	
-	public Fotografia(String id, String titulo,int año,String lugarDeCreacion,boolean enExhibicion, 
-    		String FechaEntradaGaleria,String FechaSalidaGaleria,String EstadoActual,
-    		boolean ValorFijo,int ValorInicial,int ValorMinimo,int Valor,Comprador DueñoActual,
-    		double peso, int resolucion,String observacion, String tipo,Autor autor) {
-		this.resolucion=resolucion;
-		this.tipo=tipo;
-		super(id);
-		super(titulo);
-		super(lugarDeCreacion);
-		super(enExhibicion);
-		super(FechaEntradaGaleria);
-		super(FechaSalidaGaleria);
-		super(EstadoActual);
-		super(ValorFijo);
-		super(ValorInicial);
-		super(ValorMinimo);
-		super(Valor);
-		super(DueñoActual);
-		super(peso);
-		super(observacion);
-		super(autor);
-
-		
+	public Fotografia(String id, String titulo, int año, String lugarDeCreacion, boolean enExhibicion,
+			String FechaEntradaGaleria, String FechaSalidaGaleria, String EstadoActual, boolean ValorFijo,
+			int ValorInicial, int ValorMinimo, int Valor, Comprador DueñoActual, int peso, String observacion,
+			Logica.Autor autor, int resolucion, String tipo) {
+		super(id, titulo, año, lugarDeCreacion, enExhibicion, FechaEntradaGaleria, FechaSalidaGaleria, EstadoActual,
+				ValorFijo, ValorInicial, ValorMinimo, Valor, DueñoActual, peso, observacion, autor);
+		this.resolucion = resolucion;
+		this.tipo = tipo;
 	}
 	
+}
+	
 	
 	
 
-}
+	
+	
+	
