@@ -150,7 +150,7 @@ public abstract class Pieza {
 	}
     
     public void Autor(Autor autor) {
-    	this.autor=autor
+    	this.autor=autor;
     }
     
     

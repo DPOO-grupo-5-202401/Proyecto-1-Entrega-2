@@ -2,6 +2,11 @@ package Logica;
 
 import java.util.HashMap;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Random;
+
+
 public class Administrador extends Usuario {
 	
 	private String contrasena;
@@ -39,16 +44,27 @@ public class Administrador extends Usuario {
 
     }
 
-
     // Iniciar una subasta
 	
-	public void iniciarSubasta(String fecha, Administrador administrador, Pieza pieza,
-			HashMap<String, Comprador> compradoresValidados) {
+	public Subasta iniciarSubasta(Administrador administrador, Pieza pieza,
+			HashMap<String, Comprador> compradoresValidados) {	
+		LocalDate fecha = LocalDate.now();
+		String fechaString = fecha.toString();
+		Subasta nuevaSubasta = new Subasta(fechaString, administrador, pieza,compradoresValidados);
 		
-		subasta = new Subasta()
-		
-		
-		
+		return nuevaSubasta;
 	}
+	
+
+	public void nuevoMovimiento(Integer valor, String tipoMovimiento,Comprador comprador) {
+		Random random = new Random();
+		Integer num = random.nextInt(90) + 10;
+		String id = "MOV-" + num.toString();
+		LocalTime horaActual = LocalTime.now();
+		String hora = horaActual.toString();
+		Movimiento nuevoMovimiento = new Movimiento(id,hora,valor,tipoMovimiento,comprador);
+	}
+	
+
 
 }

@@ -50,7 +50,7 @@ public class Pintura extends Pieza{
 		super(FechaEntradaGaleria);
 		super(FechaSalidaGaleria);
 		super(EstadoActual);
-		super(getValorFijo);
+		super(ValorFijo);
 		super(ValorInicial);
 		super(ValorMinimo);
 		super(Valor);
